@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
-
+import AdminCoursesPage from "@/pages/admin/courses";
 import { ThemeProvider } from "@/components/theme-provider";
 import RootLayout from "@/layouts/root-layout";
 import HomePage from "@/pages/home";
@@ -15,6 +15,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
+      { path: "admin/courses", element: <AdminCoursesPage /> },
       { path: "admin/enrollments", element: <AdminEnrollmentsPage /> },
     ],
   },
@@ -25,5 +26,5 @@ createRoot(document.getElementById("root")!).render(
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <RouterProvider router={router} />
     </ThemeProvider>
-  </StrictMode>
+  </StrictMode>,
 );

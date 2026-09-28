@@ -3,11 +3,19 @@ import { Outlet } from "react-router";
 import { AppSidebar } from "@/components/app-sidebar";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Separator } from "@/components/ui/separator";
+import Footer from "@/components/footer";
+
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+
+type FooterProps = {
+  firstName: string;
+  lastName: string;
+  studentId: string;
+};
 
 export default function RootLayout() {
   return (
@@ -25,7 +33,7 @@ export default function RootLayout() {
         <main className="flex-1 p-4">
           <Outlet />
         </main>
-        <footer className="border-t p-4 text-center text-xs text-muted-foreground"></footer>
+        <Footer firstName="ภาณุพงศ์" lastName="วังแง่" studentId="660610888" />
       </SidebarInset>
     </SidebarProvider>
   );
