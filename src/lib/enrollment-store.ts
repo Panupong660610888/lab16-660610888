@@ -5,7 +5,7 @@ import {
   students as initialStudents,
   courses as initialCourses,
 } from "@/lib/mock-data";
-import type { Course, Enrollment, Student } from "@/lib/types";
+import type { Course, Student } from "@/lib/types";
 
 type EnrollmentStore = {
   students: Student[];

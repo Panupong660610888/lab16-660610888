@@ -11,12 +11,6 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 
-type FooterProps = {
-  firstName: string;
-  lastName: string;
-  studentId: string;
-};
-
 export default function RootLayout() {
   return (
     <SidebarProvider>
